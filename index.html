@@ -5,183 +5,289 @@
 -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap');
-        
-        body {
-            font-family: 'Nunito', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F4F1DE;
-            text-align: center;
-            color: #3D405B;
-        }
-        header {
-            background: #E07A5F;
-            color: white;
-            padding: 20px 50px;
-            font-size: 1.5em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 700;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            padding: 10px 15px;
-            transition: 0.3s;
-        }
-        nav ul li a:hover {
-            background: white;
-            color: #E07A5F;
-            border-radius: 5px;
-        }
-        section {
-            padding: 40px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-            max-width: 800px;
-        }
-        .projects-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            padding: 20px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap');
 
-        .project-card {
-            background: #fefefe;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            padding: 1rem;
-            max-width: 800px;
-            margin: auto;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .project-card:hover {
-            transform: scale(1.01);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-        }
+    body {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F4F1DE;
+      text-align: center;
+      color: #3D405B;
+    }
 
-        .project-image {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-        }
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+      animation-delay: 0.2s;
+    }
 
-        .project-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-        }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        .project-image:hover img {
-            transform: scale(1.02);
-        }
+    header {
+      background: #E07A5F;
+      color: white;
+      padding: 20px 50px;
+      font-size: 1.5em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        .github-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #fff;
-            padding: 6px 10px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #000;
-            text-decoration: none;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: background 0.3s ease;
-        }
+    header h1 {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+    }
 
-        .github-badge:hover {
-            background: #f5f5f5;
-        }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
 
-        .project-title {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            font-weight: 600;
-            color: #2c2c2c;
-        }
+    nav ul li {
+      display: inline;
+    }
 
-        .project-description {
-            margin-top: 0.5rem;
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.5;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: 0.3s ease;
+    }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            padding: 8px;
-            background: #81B29A;
-            color: white;
-            border-radius: 5px;
-            margin: 5px;
-            display: inline-block;
-        }
-        footer {
-            background: #3D405B;
-            color: white;
-            padding: 15px;
-            margin-top: 20px;
-        }
-        a {
-            color: #E07A5F;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+    nav ul li a:hover {
+      background: white;
+      color: #E07A5F;
+      border-radius: 5px;
+    }
 
-        .social-icons a {
-            display: block;  /* Ensures each link is on a new line */
-            margin: 10px 0;  /* Adds vertical spacing */
-            font-size: 1.2em;
-            color: #E07A5F;
-            text-decoration: none;
-        }
+    section {
+      padding: 40px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+    }
 
-        .social-icons a i {
-            margin-right: 8px;  /* Adds space between the icon and name */
-            font-size: 1.5em;   /* Adjusts the size of the icon */
-        }
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 20px;
+    }
 
-        .social-icons a:hover {
-            color: #3D405B;
-        }
-    </style>
+    .project-card {
+      background: #fefefe;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-image img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-image:hover img {
+      transform: scale(1.03);
+    }
+
+    .github-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #fff;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    .github-badge:hover {
+      background: #f5f5f5;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #2c2c2c;
+    }
+
+    .project-description {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 8px 12px;
+      background: #81B29A;
+      color: white;
+      border-radius: 5px;
+      margin: 5px;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    ul li:hover {
+      background: #6fa08c;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #3D405B;
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #E07A5F;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      display: block;
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #E07A5F;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #3D405B;
+    }
+
+    .social-icons img {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    /* Medium devices */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .project-card,
+      section {
+        width: 90%;
+        margin: 10px auto;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Small devices */
+    @media (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+
+      header {
+        padding: 15px;
+      }
+
+      nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+      }
+
+      section {
+        padding: 15px;
+      }
+
+      .project-title {
+        font-size: 1.2rem;
+      }
+
+      .project-description {
+        font-size: 0.9rem;
+      }
+
+      ul li {
+        display: block;
+        margin: 5px auto;
+        text-align: center;
+      }
+
+      .github-badge {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+
+      .social-icons a {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
     <!-- Main header section with navigation -->
@@ -210,7 +316,7 @@
             <div class="project-card">
                 <div class="project-image">
                     <img src="dashboard1.png" alt="Car Sales Dashboard">
-                    <a class="github-badge" href="https://github.com/yourusername/car-sales-dashboard" target="_blank">GitHub</a>
+                    <a class="github-badge" href="https://github.com/arrya13n/US-car-sales" target="_blank">GitHub</a>
                 </div>
                 <div class="project-title">US Car Sales Analysis</div>
                 <div class="project-description">
@@ -221,7 +327,7 @@
             <div class="project-card">
                 <div class="project-image">
                     <img src="sql.png" alt="SQL Data Analytics">
-                    <a class="github-badge" href="https://github.com/yourusername/sql-data-analytics" target="_blank">GitHub</a>
+                    <a class="github-badge" href="https://github.com/arrya13n/data-warehouse-project" target="_blank">GitHub</a>
                 </div>
                 <div class="project-title">SQL Data Analytics</div>
                 <div class="project-description">
@@ -263,7 +369,7 @@
     <section id="contact">
         <h2>Contact</h2>
         <div class="social-icons">
-            <a href="aryanvaghela2016@gmail.com" target="_blank">
+            <a href="mailto:aryanvaghela2016@gmail.com">
                 <img src="gmail.png" alt="Email" style="width: 24px; height: 24px; margin-right: 8px;">
                 Gmail
             </a>
