@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!-- 
+  Portfolio website for Aryan Vaghela
+  Last updated: June 2024
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F1DE;
+            text-align: center;
+            color: #3D405B;
+        }
+        header {
+            background: #E07A5F;
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.5em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            background: white;
+            color: #E07A5F;
+            border-radius: 5px;
+        }
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+        }
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: #fefefe;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            padding: 1rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .project-card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .github-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #fff;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background 0.3s ease;
+        }
+
+        .github-badge:hover {
+            background: #f5f5f5;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #2c2c2c;
+        }
+
+        .project-description {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 8px;
+            background: #81B29A;
+            color: white;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+        }
+        footer {
+            background: #3D405B;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        a {
+            color: #E07A5F;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            display: block;  /* Ensures each link is on a new line */
+            margin: 10px 0;  /* Adds vertical spacing */
+            font-size: 1.2em;
+            color: #E07A5F;
+            text-decoration: none;
+        }
+
+        .social-icons a i {
+            margin-right: 8px;  /* Adds space between the icon and name */
+            font-size: 1.5em;   /* Adjusts the size of the icon */
+        }
+
+        .social-icons a:hover {
+            color: #3D405B;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main header section with navigation -->
+    <header>
+        <h1>Aryan Vaghela</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- About Me section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a data-driven fresh graduate from Wilfrid Laurier University with Masters of science in computer science with a passion for transforming raw data into meaningful insights. With expertise in Python, SQL, and data visualization tools like Tableau and Power BI, I specialize in analyzing complex datasets to drive strategic business decisions. My experience includes building predictive models, designing ETL pipelines, and crafting interactive dashboards that help organizations optimize their operations. I have always been  eager to explore new challenges and leverage data to solve real-world problems efficiently.</p>
+    </section>
+    
+    <section id="projects">
+        <h2 style="text-align: center;">Projects</h2>
+        <div class="projects-container">
+    
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="dashboard1.png" alt="Car Sales Dashboard">
+                    <a class="github-badge" href="https://github.com/yourusername/car-sales-dashboard" target="_blank">GitHub</a>
+                </div>
+                <div class="project-title">US Car Sales Analysis</div>
+                <div class="project-description">
+                    In this project, I took a dataset from Kaggle with about 500k rows. I performed ETL using Python and SQL, cleaned the data, and built an interactive dashboard with insights from various charts.
+                </div>
+            </div>
+    
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="sql.png" alt="SQL Data Analytics">
+                    <a class="github-badge" href="https://github.com/yourusername/sql-data-analytics" target="_blank">GitHub</a>
+                </div>
+                <div class="project-title">SQL Data Analytics</div>
+                <div class="project-description">
+                    I learned to create ETL pipelines using the Bronze-Silver-Gold model and performed business analysis using EDA, finally creating an interactive report from SQL-based transformations.
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="dashboard2.png" alt="Sales_Customer_dashboard">
+                    <a class="github-badge" href="https://github.com/arrya13n/Sales_Customer_Dashboard" target="_blank">GitHub</a>
+                </div>
+                <div class="project-title">Sales_Customer_dashboard</div>
+                <div class="project-description">
+                    Analyzed data in tableau and build an interactive sales and customer dashboard.
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Tableau</li>
+            <li>Power BI</li>
+            <li>Machine Learning</li>
+            <li>ETL Processes</li>
+            <li>Data Cleaning</li>
+            <li>Data Pipeling</li>
+            <li>Deep learning</li>
+
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="social-icons">
+            <a href="aryanvaghela2016@gmail.com" target="_blank">
+                <img src="gmail.png" alt="Email" style="width: 24px; height: 24px; margin-right: 8px;">
+                Gmail
+            </a>
+            <a href="https://www.linkedin.com/in/aryan-vaghela-6b24241ba/" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px; margin-right: 8px;">
+                LinkedIn
+            </a>
+            <a href="https://github.com/arrya13n" target="_blank">
+                <img src="github.png" alt="GitHub" style="width: 24px; height: 24px; margin-right: 8px;">
+                GitHub
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Aryan Vaghela. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
