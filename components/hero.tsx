@@ -21,7 +21,7 @@ export function Hero() {
               {/* Glow effect behind photo */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-primary/10 blur-2xl scale-110" />
               <div className="relative h-40 w-40 md:h-48 md:w-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl shadow-primary/10">
-                <Image
+                <img
                   src="/Portfolio/images/aryan-profile.png"
                   alt="Aryan Vaghela - Data Analyst & Analytics Engineer"
                   className="h-full w-full object-cover object-top"
