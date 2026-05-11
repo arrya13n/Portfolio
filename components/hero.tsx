@@ -23,11 +23,9 @@ export function Hero() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-primary/10 blur-2xl scale-110" />
               <div className="relative h-40 w-40 md:h-48 md:w-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl shadow-primary/10">
                 <Image
-                  src="/images/aryan-profile.png"
+                  src="/Portfolio/images/aryan-profile.png"
                   alt="Aryan Vaghela - Data Analyst & Analytics Engineer"
-                  fill
-                  className="object-cover object-top"
-                  priority
+                  className="h-full w-full object-cover object-top"
                 />
               </div>
               {/* Status indicator */}
