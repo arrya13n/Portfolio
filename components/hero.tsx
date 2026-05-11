@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowDown, Sparkles } from "lucide-react"
 
 export function Hero() {
