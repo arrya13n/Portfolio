@@ -3,6 +3,15 @@ import Link from "next/link"
 
 const projects = [
   {
+    title: "Instacart Market Basket Analytics",
+    description:
+      "Built a Microsoft Fabric Bronze–Silver–Gold Lakehouse analysis of 3.35M orders and 33.82M purchased-product entries using PySpark and T-SQL, then delivered three interactive Power BI report pages.",
+    impact: "Identified 315K seven-day return-gap orders, Produce's 29.24% share of purchased entries, and Banana's 84.51% reorder rate to inform testable retail decisions",
+    tags: ["Microsoft Fabric", "PySpark", "T-SQL", "Power BI", "Dimensional Modeling"],
+    github: "https://github.com/arrya13n/instacart_market_basket_analysis",
+    highlight: true,
+  },
+  {
     title: "Google Store Ecommerce Dashboard",
     description:
       "Built a BigQuery SQL and Looker Studio dashboard analyzing $15.7M in ecommerce revenue across monthly trends, traffic channels, product demand, conversion gaps, and geographic performance.",
@@ -20,15 +29,7 @@ const projects = [
     github: "https://github.com/arrya13n/Layoff-risk-analyzer",
     highlight: false,
   },
-  {
-    title: "Instacart Market Basket Analytics",
-    description:
-      "Analyzed 3.35M orders and 33.82M product-purchase entries using Microsoft Fabric, PySpark, and SQL; modeled Bronze-Silver-Gold data and built three Power BI dashboard pages.",
-    impact: "Identified 315K seven-day return-gap orders, a 29.24% Produce purchase share, and an 84.51% historical Banana reorder rate",
-    tags: ["Microsoft Fabric", "PySpark", "SQL", "Power BI"],
-    github: "https://github.com/arrya13n/instacart_market_basket_analysis",
-    highlight: true,
-  },
+
   {
     title: "US Car Sales Analysis",
     description:
