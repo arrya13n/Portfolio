@@ -81,8 +81,8 @@ export function Hero() {
               <div className="text-sm text-muted-foreground">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-foreground">500k+</div>
-              <div className="text-sm text-muted-foreground">Rows Analyzed</div>
+              <div className="text-3xl font-bold text-foreground">33.82M</div>
+              <div className="text-sm text-muted-foreground">Product Entries Analyzed</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-foreground">15%</div>
