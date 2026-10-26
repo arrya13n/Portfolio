@@ -18,16 +18,16 @@ const projects = [
     impact: "Executive-level diagnostic tool transforming multi-source data into an interactive command center",
     tags: ["Python", "AWS S3", "Athena", "Tableau"],
     github: "https://github.com/arrya13n/Layoff-risk-analyzer",
-    highlight: true,
+    highlight: false,
   },
   {
-    title: "Customer Churn Dashboard",
+    title: "Instacart Market Basket Analytics",
     description:
-      "Built an interactive customer churn dashboard using Tableau, SQL, and Python to analyze churn patterns and segment customers by retention risk.",
-    impact: "Identified key behavioral drivers supporting data-driven retention strategies",
-    tags: ["Python", "SQL", "Tableau"],
-    github: "https://github.com/arrya13n/Customer-Churn-Dashboard",
-    highlight: false,
+      "Analyzed 3.35M orders and 33.82M product-purchase entries using Microsoft Fabric, PySpark, and SQL; modeled Bronze-Silver-Gold data and built three Power BI dashboard pages.",
+    impact: "Identified 315K seven-day return-gap orders, a 29.24% Produce purchase share, and an 84.51% historical Banana reorder rate",
+    tags: ["Microsoft Fabric", "PySpark", "SQL", "Power BI"],
+    github: "https://github.com/arrya13n/instacart_market_basket_analysis",
+    highlight: true,
   },
   {
     title: "US Car Sales Analysis",
